@@ -1,0 +1,23 @@
+/*.scrStart{
+    display:block;
+  }
+  .scrProfessions{
+    display:none;
+  }
+  .scrChosenCareer{
+    display:none;
+  }
+  .scrNews{
+    display:none;
+  }
+  .scrControls{
+    display:none;
+  }
+  */
+
+  body{
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    color: white;
+  }
+  

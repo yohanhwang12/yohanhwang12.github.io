@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Great Depression</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="css/styleGDSim.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+
+    <div id="app" v-cloak>
+      <div v-show="scrStart">
+        <h2>The Great Depression Simulator</h2>
+        <h4>The goal of this game is... to survive the Great Depression!</h4>
+        <button @click="scrStart = false, scrProfessions = true">Click here to Start</button>
+      </div>
+      <div v-show="scrProfessions">
+        <h3>First, you will randomly be assigned a career, which will determine your pay and your job security.</h3>
+        <button @click="scrProfessions = false, scrChosenCareer = true, assignCareer()">Click here to be assigned a carrer</button>
+      </div>
+      <div v-show="scrChosenCareer">
+        <h3>Congratulations!</h3>
+        <h3>You are a {{ randomCareer }}</h3>.
+        <h3>You make ${{ salary }} a year.</h3>
+        <img id="imgCareer">
+        <h3>After incurring living expenses of $900 a year,
+        you can allocate the rest into:</h3>
+        <ul>
+          <li>a bank, and gain a 5% annual interest. </li>
+          <li>put it in stocks and see how the market performs.</li>
+          <li>Any money not allocated, will be placed as cash under your mattress.</li>
+        </ul>
+        <button @click="scrChosenCareer = false, scrControls = true, assignInitVal(), assignRangeVal()">Click to continue</button>
+      </div>
+
+      <!--<label>rotateX: {{ rotateX }}deg; </label>
+          <input type="range" min="-180" max="180" v-model="rotateX" />-->
+
+      <div class="scrNews"><!--Must do style binding visibility hidden-->
+        <h3 id="News">What will happen next?</h3>
+      </div>
+      <div v-show="scrControls">
+        <div>
+          <table>
+            <tr>
+              <td></td>
+              <td>This Year</td>
+              <td>Last Year's Total</td>
+            </tr>
+            <tr>
+              <td>Stocks Allocation</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="range" id="rStocks" value="0" min="0" max="0" v-model="yearStocks"/></td>
+              <td>{{ yearStocks }}</td>
+              <td>{{totalStocks}}</td>
+            </tr>
+              <td>Bank Allocation</td>
+            <tr>
+              <td><input type="range" id="rBank" value="0" min="0" max="0" v-model="yearBank"/></td>
+              <td>{{yearBank}}</td>
+              <td>{{totalBank}}</td>
+            </tr>
+            <tr>
+              <td>Cash on your mattress</td>
+              <td>{{yearMattress}}</td>
+              <td>{{totalMattress}}</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <button id="btnNextYear">Continue to Next Year</button>
+        </div>
+
+    </div>
+
+    <!--
+    <div class="scrStart">
+      <h2>The Great Depression Simulator</h2>
+      <h4>The goal of this game is... to survive the Great Depression!</h4>
+      <button id="btnStart">Click here to Start</button>
+    </div>
+
+    <div class="scrProfessions">
+        <h3>First, you will randomly be assigned a career, which will determine your pay and your job security.</h3>
+        <button id="btnProfessions">Click here to be assigned a carrer</button>
+    </div>
+  
+    <div class="scrChosenCareer">
+        <h3>Congratulations!</h3>
+        <h3 id="textProfession">profession</h3>.
+        <h3 id="numSalary">0</h3>
+        <img id="imgCareer"></img>
+        <h3>After incurring living expenses of $900 a year,
+        you can allocate the rest into:</h3>
+        <ul>
+          <li>a bank, and gain a 5% annual interest. </li>
+          <li>put it in stocks and see how the market performs.</li>
+          <li>Any money not allocated, will be placed as cash under your mattress.</li>
+        </ul>
+        <button id="btnYearOne">Click to continue</button>
+    </div>
+  -->
+
+
+<!--
+    <div class="scrNews">
+      <h3 id="News">What will happen next?</h3>
+    </div>
+    <div class="scrControls">
+      <div>
+        <table>
+          <tr>
+            <td>Stocks Allocation</td>
+            <td>This Year</td>
+            <td>Total</td>
+          </tr>
+          <tr>
+            <td><input type="range" value="50" min="0" max="100" id="rStocks" oninput="rangevalue.value=value"/></input></td>
+            <td id="valueStocks">0</td>
+            <td id="valueStocksT">0</td>
+          </tr>
+            <td>Bank Allocation</td>
+          <tr>
+            <td><input type="range" value="50" min="0" max="100" id="rBank" oninput="rangevalue.value=value"/></input></td>
+            <td id="valueBank">0</td>
+            <td id="valueBankT">0</td>
+          </tr>
+          <tr>
+            <td>Cash on your mattress</td>
+            <td id="valueMattress">0</td>
+            <td id="valueMattressT">0</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <button id="btnNextYear">Continue to Next Year</button>
+      </div>
+    -->
+
+    </div>
+<script src="java.js" charset="utf-8"></script>
+  </body>
+</html>

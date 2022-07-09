@@ -1,0 +1,217 @@
+body {
+  text-align: center;
+  background-color: #f1f3f8;
+}
+.navbar-dark{
+  background-color:#435b78;
+}
+.home{
+  height: 100vh;
+  font-family: Garamond, serif;
+}
+
+#personalPic{
+  margin-top: 130px;
+  margin-bottom: 50px;
+  width:400px;
+  height:400px;
+  object-fit:cover;
+  border-radius:50%;
+  object-position: right 62% bottom 50%;
+}
+
+.carousel-item{
+  height:100vh;
+  background-color: #393b44;
+  padding: 8% 10%;
+  color: white;
+}
+h2{
+  letter-spacing: 0.2em;
+  font-family: Georgia;
+}
+p{
+  padding: 8px;
+}
+#buttonGD{
+  padding: 10px;
+  border: 5px solid #8d93ab;
+  color:white;
+  background-color: rgb(41, 40, 40);
+  font-family: 'Press Start 2P', cursive;
+}
+button{
+  margin: 10px;
+}
+.col-md-6{
+  font-family: Georgia;
+  text-align: center;
+}
+#colCoding{
+  padding:4% 0;
+}
+#colTeaching{
+  padding:6% 0;
+}
+#tptLogo{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 50%
+}
+#bookCover{
+  width: 60%;
+  border: 5px solid #8d93ab;
+}
+/*@media(max-width: 768px){
+  #bookCover{
+    display: none;
+  }
+}*/
+
+.Education{
+  /*font-family: Georgia;*/
+  background-color: #d6e0f0;
+  height: 100hv;
+}
+.accordion{
+  background-color: #d6e0f0;
+  text-align: center;
+  border-color: #d6e0f0;
+  --bs-accordion-btn-focus-border-color: #d6e0f0;
+}
+.accordion-item{
+  background-color: #d6e0f0;
+  text-align: center;
+  color: var(#d6e0f0);
+  background-color: var(#d6e0f0);
+  border: var(0) solid var(#d6e0f0);
+  font-family:'Trebuchet MS';
+}
+.accordion-collapse collapse show{
+  --bs-accordion-border-color: #d6e0f0;
+  --bs-accordion-border-width: 0px;
+  --bs-accordion-btn-focus-border-color: #d6e0f0;
+}
+
+.accordion-header{
+  background-color: #d6e0f0;
+  text-align: center;
+}
+
+.accordion-button {
+  background-color: #d6e0f0;
+  display: inline;
+  text-align: center;
+  font-family: Georgia;
+  letter-spacing: 0.2em;
+}
+.accordion-button:hover{
+  background-color: #f1f3f8;
+  text-align: center;
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+}
+.accordion-button:focus{
+  border-color: #d6e0f0;
+  outline-color: #d6e0f0;
+}
+.accordion-body{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Trebuchet MS';
+  letter-spacing: 0.05em;
+}
+.accordionList{
+  width: fit-content;
+  text-align: left;
+}
+li{
+  padding: 10px 0px;
+}
+#edBottom{
+  background-color: #d6e0f0;
+  height: 200px;
+}
+
+.experience{
+  height:auto;
+  color:#010434;
+  background-color: #8d93ab;
+  text-align: center; 
+  padding: 20px;
+  font-family:Arial, sans-serif;
+}
+
+.row{
+  font-family: Trebuchet MS;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: center;
+}
+
+.left{
+  position: relative;
+  width: 40%;
+  display: inline-block;
+  text-align: right;
+}
+.right{
+  position: relative;
+  width: 40%;
+  display: inline-block;
+  text-align: left;
+}
+#leftMiddle{
+  display: inline-block;
+}
+#rightMiddle{
+  display: none;
+}
+@media (max-width: 768px) {
+  .row{
+    justify-content:left;
+  }
+  .left{
+    display:none;
+  }
+  .right{
+    width: 80%;
+  }
+  #leftMiddle{display: none;}
+  #rightMiddle{display: block;}
+  #liveAlertBtn{
+    display: block;}
+  #synopsis{display: none;}
+}
+@media (min-width: 768px) {
+  #synposis{display: block;}
+  #liveAlertBtn{display: none;}
+}
+.wrapper {
+  width: 50px;
+  height: auto;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  background: rgb(131, 30, 30);
+  border-radius: 5px;
+  position: relative;
+  margin: auto auto;
+}
+.vertical-line {
+  width: 4px;
+  height: 100%;
+  background: rgb(131, 30, 30);
+  margin: auto auto;
+}
+.contact {
+  height: 100hv;
+}
+
+
+
+
+
