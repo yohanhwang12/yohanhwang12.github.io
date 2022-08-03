@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   body{
@@ -125,3 +126,132 @@
 
 
 
+=======
+
+
+  body{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-right: 7%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #28282B;
+    color: white;
+  }
+  h2 {
+    font-size: 1.5em;
+    color: rgb(232, 62, 5);
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  h4{
+    margin-top:4px;
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 0.8em; 
+    margin-top:4px;
+  }
+  @media (max-width: 576px) {
+    h2 {
+      font-size: 1em;
+      color: rgb(232, 62, 5);
+    }
+    h3 {
+      font-size: .8em;
+    }
+    h4{
+      margin-top:4px;
+      font-size: .8em;
+    }
+    p {
+      font-size: 0.6em; 
+      margin-top:4px;
+    }
+    button{
+      font-size: 0.6em;
+    }
+    table, td{
+      font-size: 0.6em;
+    }
+  }
+  button{
+    padding: 4px;
+    margin: 6px;
+    border-radius: 4px;
+    background-color:goldenrod;
+  }
+  #options{
+    
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+  }
+  #ulOptions{
+    font-size:0.8em;
+    justify-content: left;
+    text-align: left; 
+  }
+  #divTable{
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+  }
+  table{
+    justify-content: center;
+    text-align: center; 
+    font-size: 12px;
+    border:2px solid;
+    border-color:goldenrod;
+    border-radius:2px;
+    border-collapse: collapse;
+
+  }
+  td{
+    margin:10px;
+    padding:2px 15px 2px 15px;
+  }
+  #imgNews{
+    /* visibility: hidden; */
+    text-align: right;
+    width: 600px;
+    /* height: 314px; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    animation-name: newsAnimation;
+    animation-duration: 1s;
+    animation-direction: normal;
+  }
+  #divNews{
+    width: auto;
+    text-align: center;
+  }
+  #win{
+    font-size: 1.2em;
+    color: lightgreen;
+    /* display:none; */
+  }
+  #gameOver{
+    font-size: 1.2em;
+    color: red;
+    /* display: none; */
+  }
+  @media only screen and (max-width: 768px) {
+    #imgNews {
+      width: 85%;
+    }
+  }
+  @keyframes newsAnimation{
+    from{
+      transform: scale(.1) rotate(0deg);
+      }
+    to{
+      transform: scale(1) rotate(1080deg);
+    }
+  }
+
+
+
+>>>>>>> e4b9eb3c659676781d1cd1f7c569ab7fa4618723

@@ -24,9 +24,12 @@ body {
     width: 270px;
     height: 270px;
   }
+<<<<<<< HEAD
   .pCarousel{
     font-size:small;
   }
+=======
+>>>>>>> e4b9eb3c659676781d1cd1f7c569ab7fa4618723
 }
 .carousel-item{
   height:100vh;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html>
@@ -342,3 +343,349 @@
     <script src="jsIndex.js"></script>
   </body>
 </html>
+=======
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Yohan's CV</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#homeid">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#educationid">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experienceid">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contactid">Contact</a>
+        </li>
+      </ul>
+      </div>
+    </nav>
+    
+    <div class="home" id="homeid">
+      <img src="images/picturepersonal.jpg" id="personalPic">
+      <h1>Hi, I'm Yohan Hwang,</h1>
+      <h3>a web and fintech developer, thinker, and educator.</h3>
+    </div>
+
+    <div id="portfolio" class="carousel slide" data-bs-interval="5000" data-bs-pause="hover" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#portfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#portfolio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#portfolio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-6">
+                <img src="images/GDScreenShot.png" id="GDScreenShot">
+            </div>
+            <div class="col-md-6" id="colCoding">
+              <h2>CODING SAMPLES</h2>
+              <p>While this resume itself showcases my abilities to build a responsive website using html, css, and bootstrap,
+                I have also included here a link to a much more interactive game I have created. Great Depression Simulation 
+                is an educational game I designed as a teacher for use in grades 6-12 in the social studies or history classes.
+                An older version was featured by Amplify Tablets, a company that sold educational tablets to school districts.
+                Here students go through several rounds setting up a budget and then are faced with some events of the Great Depression.
+                The same languages plus Vue.js were used.
+              </p>
+              <div>
+              <a href = "GDSim.html" target = "_blank">
+                <button id="buttonGD">Play the Game</button>
+              </a>
+              </div>
+          
+            </div> 
+          </div>
+        </div>  
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6" id="colTeaching">
+              <h2>TEACHING SAMPLES</h2>
+              <p>Throughout my teaching career I have created original lessons to engage students in a wide variety of subjects.
+              I have uploaded my best lessons in TeachersPayTeachers where I go with the alias "Creative Educator." 
+              I have sold thousands of lessons and received a rating of 4.9/5.0 from other teachers. Many of these are history lessons that bring
+              the past to life by simulating it through some activity or game.
+              </p>  
+            </div>
+            <div class="col-md-6" id="colTptLogo">
+              <img src="images/tptLogo.jpg" id="tptLogo">
+              <div></div>
+              <a href="https://www.teacherspayteachers.com/Store/Creative-Educator" target = "_blank">
+                <button type="button" class="btn btn-secondary" style="font-family: Arial">See my lessons</button>
+              </a>
+            </div>
+          </div>
+        </div> 
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6" id="colBookCover">
+              <div id="liveAlertPlaceholder" style="font-size:12px"></div>
+              <img src="images/bookCover.jpg" id="bookCover">
+            </div>
+            <div class="col-md-6" id="colBookParagraph">
+              <h2>PUBLICATIONS</h2>
+              <p>
+              My book "Reclaiming Our Political Roots," was published by Wipf and Stock, a publisher that specializes in thoughtful
+              Christian writing. It was endorsed by Stanley Hauerwas. <a style="color:rgb(186, 177, 231)" id="liveAlertBtn">Here is a synopsis.</a>
+              </p>
+              
+              <!--<button type="button" class="btn btn-secondary" id="liveAlertBtn">Synopsis</button>-->
+              
+              <p id="synopsis" style="font-style: italic; font-size:13px;">
+                Why is it that Trump or Democratic rallies garner more enthusiasm than church, and in the process polarize the church? 
+                Why is it that corporations like SpaceX or Apple receive similar reactions? The Western church is rapidly shrinking, 
+                led by an exodus of millennials, who often find more meaning, values, and community in their political party or their 
+                workplace than church. Moreover, our lives have become so fractured that we cannot ascertain any relationship between 
+                our work, family, church, the economy, politics, science, or technology. This book argues that the problem is in our 
+                allowance of the nation and corporations to be the main providers of justice, healthcare, education, and welfare--goods 
+                that the church used to provide. In the process, our lives became fractured as every facet of life was sundered from 
+                religious and moral values. But this book argues that, for Christians, the church is our primary political body, 
+                not the nation. This is a summons to church leaders, heads of various industries, and anyone who senses the urgency 
+                of the above crises to reimagine our very fabric of society so that Christ and his church may have their proper place 
+                once again.
+              </p>
+              <!--<p>
+                I have also published other smaller pieces in academic journals, such as "Eschatology in Genesis 15.6," published in 
+                Hebrew Studies in 2014.
+              </p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#portfolio" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#portfolio" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> 
+    
+    <div class="Education" id="educationid">
+      <h2 style="text-align: center; padding: 10% 0">EDUCATION</h2>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <strong>DEGREES</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul class="accordionList">
+                <li>
+                  DUKE DIVINITY SCHOOL. Durham, North Carolina.<br>
+                  <u>Master of Theological Studies,</u> 2012.
+                </li>
+                <li>
+                  NATIONAL-LOUIS UNIVERSITY. Chicago, Illinois.<br>
+                  <u>Master of Arts in Teaching for Secondary Education,</u> 2007.
+                </li>
+                <li>
+                  LOYOLA UNIVERSITY CHICAGO. Chicago, Illinois.<br>
+                  <u>Bachelor of Arts in History, Minor in Philosophy,</u> 2005.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <strong>CERTIFICATES</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul class="accordionList">
+                <li>
+                  Currently completing a <strong>Fintech Certificate.</strong><br>
+                  NORTHWESTERN UNIVERSITY.
+                </li>
+                <li>
+                  <strong>Interactivity with Javascript.</strong><br>
+                  UNIVERSITY OF MICHIGAN, through Coursera, 2016.
+                </li>
+                <li>
+                  <strong>Introduction to CSS3.</strong><br>
+                  UNIVERSITY OF MICHIGAN, through Coursera, 2016.
+                </li>
+                <li>
+                  <strong>Introduction to HTML5.</Strong><br>
+                  UNIVERSITY OF MICHIGAN, through Coursera, 2016.
+                </li>
+                <li>
+                  <strong>Programming Foundations with Javascript, HTML, and CSS.</strong><br>
+                  DUKE UNIVERSITY, through Coursera, 2016.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <strong>LICENSES</strong>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul class="accordionList">
+                <li>
+                  Illinois Teaching License in Secondary Education (Grades 6-12)<br>
+                  Endorsements in History, Psychology, and Geography.
+                </li>
+                <li>Illinois Real Estate Broker</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="edBottom">
+      </div>
+    </div>
+
+      <div class="experience" id="experienceid">
+        <h2 style="text-align: center; padding: 15px">EXPERIENCE</h2>
+        <div class="row">
+          <div class="left">
+            <p style="display:none"></p>
+          </div>
+            <div class="wrapper">
+              <div class="circle" style="margin-top: 20px"></div>
+              <div class="vertical-line"></div> 
+            </div>
+          <div class="right">
+            <p style="display:inline-block"><strong>Real Estate Developer and Broker,</strong> 2020-2022<br>
+            AMERICAN INTERNATIONAL REALTY<br>
+            Currently rehab, flip, buy, sell and manage rental and rehab properties. This includes budgeting and managing projects and contractors.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p id="leftMiddle"><strong>Teacher and Robotics Mentor,</strong><br>
+              2012 - May 2022.<br>
+              CHICAGO HOPE ACADEMY<br>
+              Taught Physics, History, Bible, and Spanish to grades 9-11.
+              Was Lead Robotics Mentor of the robotics team,
+              which competed at the Midwest Regional FIRST Robotics Competition.
+              Taught the team Programming, Electronics, Power Tools and Fund-raising.
+              Managed four subgroups of students for each of the above tasks.
+              Raised over $8000 in private grants per year.
+            </p>
+          </div>
+            <div class="wrapper">
+              <div class="circle"></div>
+              <div class="vertical-line"></div> 
+            </div>
+          <div class="right">
+            <p id="rightMiddle"><strong>Teacher and Robotics Mentor,</strong><br>
+              2012 - May 2022.<br>
+              CHICAGO HOPE ACADEMY<br>
+              Taught Physics, History, Bible, and Spanish to grades 9-11.
+              Was Lead Robotics Mentor of the robotics team,
+              which competed at the Midwest Regional FIRST Robotics Competition.
+              Taught the team Programming, Electronics, Power Tools and Fund-raising.
+              Managed four subgroups of students for each of the above tasks.
+              Raised over $8000 in private grants per year.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <p style="display:inline-block"></p>
+          </div>
+            <div class="wrapper">
+              <div class="circle"></div>
+            </div>
+          <div class="right">
+            <p style="display:inline-block"><strong>Other Teaching Experience,</strong> 2008-2010<br>
+            Taught Economics, Philosophy, Government, and Geography, aside from the subjects mentioned above.
+            Worked in international schools in Costa Rica and South Korea. Taught US History as an adjunct at the college level in Universidad Hispanoamericana in
+            Costa Rica.<br>
+            Currently fluent in English, Spanish, and Korean.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="contact" id="contactid">
+        <h2 style="text-align: center; padding: 20px">CONTACT ME</h2>
+        <p>I am currently open to employment in the field of Web Design and Development including part-time, full-time, and internship roles. 
+          Feel free to contact me.</p>
+          <a href = "Resume2022pdf.pdf" target = "_blank">
+            <button class="btn btn-secondary">See my Resume in PDF</button>
+          </a>
+        <form action="mailto:yohanhwan@gmail.com" method="post" enctype="text/plain">
+  
+            <div class="row mb-3">
+              <label for="inputName" class="col-sm-2 col-form-label">Your Name</label>
+              <div class="col-sm-10">
+                <input type="text" name="yourName" value=" " class="form-control" id="inputName">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputOrg" class="col-sm-2 col-form-label">Your Organization</label>
+              <div class="col-sm-10">
+                <input type="text" name="yourOrg" value=" " class="form-control" id="inputOrg">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail" class="col-sm-2 col-form-label">Your Email</label>
+              <div class="col-sm-10">
+                <input type="email" name="yourEmail" value=" " class="form-control" id="inputEmail">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputMessage" class="col-sm-2 col-form-label">Your Message</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" name="yourMessage" value=" " id="inputMessage" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-sm-10 offset-sm-2">
+                
+              </div>
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit</button>
+          
+        </form>
+        
+      </div>
+
+
+    </div>
+
+    <script src="jsIndex.js"></script>
+  </body>
+</html>
+>>>>>>> e4b9eb3c659676781d1cd1f7c569ab7fa4618723

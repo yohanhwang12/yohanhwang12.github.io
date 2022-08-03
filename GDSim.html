@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -100,3 +101,107 @@
 <script src="java.js" charset="utf-8"></script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Great Depression</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="css/styleGDSim.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    
+    <div id="app" v-cloak>
+      
+      <div v-show="scrStart">
+        <h2 style="margin-top:250px">The Great Depression Simulator</h2>
+        <h4>The goal of this game is... to survive the Great Depression!</h4>
+        <button @click="scrStart = false, scrProfessions = true, playBeginning()">Click here to Start</button>
+      </div>
+      <div v-show="scrProfessions">
+        <h3 style="margin-top:250px">First, you will randomly be assigned a career, which will determine your pay and your job security.</h3>
+        <button @click="scrProfessions = false, scrChosenCareer = true, assignCareer()">Click here to be assigned a carrer</button>
+      </div>
+      <div v-show="scrChosenCareer">
+        <h3 style="color:sandybrown">Congratulations!</h3>
+        <h3>You are a {{ randomCareer }}.</h3>
+        <h3>You make ${{ salary }} a year.</h3>
+        <img id="imgCareer">
+        <h4>After incurring living expenses of $900 a year,
+        you can allocate the rest into:</h4>
+        <div id="options">
+        <ul id="ulOptions">
+          <li>a bank, and gain a 5% annual interest. </li>
+          <li>put it in stocks and see how the market performs.</li>
+          <li>Any money not allocated, will be placed as cash under your mattress.</li>
+        </ul>
+        </div>
+        <button @click="scrChosenCareer = false, scrNews = true, scrControls = true, assignInitVal(), assignRangeVal()">Click to continue</button>
+      </div>
+
+      <div v-show="scrNews">
+        <div id="divNews">
+          <img id="imgNews" src="">
+        </div>
+
+        <p v-show="newsShow" id="News">After $900 in living expenses you can either allocate the rest into the stock market for some outsize gains
+          or put it in the bank for a 5% interest, or just store it under your mattress. Move each slider to choose your allocations for this
+          round and then press "Continue."
+        </p>
+        <p v-show="winShow" id="win">Congratulations! You survived</p>
+        <p v-show="gameOverShow" id="gameOver">GAME OVER</p>
+      </div>
+      <div v-show="scrControls">
+        <div id="divTable">
+          <table id="table">
+            <tr>
+              <td></td>
+              <td>This Year</td>
+              <td>Last Year's Total</td>
+            </tr>
+            <tr>
+              <td>Stocks Allocation</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input type="range" id="rStocks" value="0" min="0" max="0" @input="stocksMethod" v-model="yearStocks"/></td>
+              <td>{{ yearStocks }}</td>
+              <td>{{totalStocks}}</td>
+            </tr>
+              <td>Bank Allocation</td>
+            <tr>
+              <td><input type="range" id="rBank" value="0" min="0" max="0" @input="bankMethod" v-model="yearBank"/></td>
+              <td>{{yearBank}}</td>
+              <td>{{totalBank}}</td>
+            </tr>
+            <tr>
+              <td>Cash on your mattress</td>
+              <td>{{yearMattress}}</td>
+              <td>{{totalMattress}}</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <button id="btnNextYear" @click="nextYear()">Continue to Next Year</button>
+        </div>
+
+    </div>
+
+  
+<script src="java.js" charset="utf-8"></script>
+  </body>
+</html>
+>>>>>>> e4b9eb3c659676781d1cd1f7c569ab7fa4618723
