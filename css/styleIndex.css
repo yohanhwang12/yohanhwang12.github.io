@@ -24,6 +24,9 @@ body {
     width: 270px;
     height: 270px;
   }
+  .pCarousel{
+    font-size:small;
+  }
 }
 .carousel-item{
   height:100vh;
