@@ -4,7 +4,7 @@ This is my online resume which also contains a link to an educational game that 
 
 ## Getting Started
 
-This project is up and running as a github page. Simply click on this link: <a href="yohanhwang12.github.io" target="_blank">Yohan's Resume</a>
+This project is up and running as a github page. Simply copy and paste the following address in your browser's address bar: yohanhwang12.github.io 
 
 You can navigate the resume simply by scrolling or using the navbar at the top. 
 
